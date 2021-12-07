@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-input [(ngModel)]="ipAddress" value="192.168.4.1"  placeholder="Enter Gateway IP"></ion-input>
+  <div  class="ion-text-center">{{ this.appComponent.ipAddress }}</div >
   <ion-list *ngFor="let machine of machines">
     <ion-item button="true" (click)="blink(machine.id)">{{ machine.name }}</ion-item>
   </ion-list>

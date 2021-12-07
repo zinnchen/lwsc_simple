@@ -7,7 +7,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-input [(ngModel)]="ipAddress" value="192.168.4.1" placeholder="Enter Gateway IP"></ion-input>
 
     <ion-list *ngFor="let fkt of cache">
       <ion-item button="true" (click)="fire(fkt.functionId, fkt.machineId)">{{ fkt.name }}</ion-item>
