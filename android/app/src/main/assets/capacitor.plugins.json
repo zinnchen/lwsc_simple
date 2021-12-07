@@ -18,9 +18,5 @@
 	{
 		"pkg": "@frontall/capacitor-udp",
 		"classpath": "com.capacitorjs.plugins.udp.UDPPlugin"
-	},
-	{
-		"pkg": "capacitor-udp",
-		"classpath": "ai.unitree.udp.UdpPlugin"
 	}
 ]

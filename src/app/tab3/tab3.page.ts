@@ -2,18 +2,18 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ToastController } from '@ionic/angular';
 
+import { AppComponent } from '../app.component';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  ipAddress = '192.168.178.250';
-
   functions = [];
   cache = [];
 
-  constructor(private httpClient: HttpClient, private toastCtrl: ToastController) { }
+  constructor(private httpClient: HttpClient, private toastCtrl: ToastController, private appComponent: AppComponent) { }
 
   ionViewWillEnter() {
     this.sendGetMachines();
@@ -22,12 +22,12 @@ export class Tab3Page {
 
   public sendGetMachines(){
     this.functions = [];
-    this.httpClient.get<any>('http://' + this.ipAddress + '/machine_count').subscribe(dataL => {
+    this.httpClient.get<any>('http://' + this.appComponent.ipAddress + '/machine_count').subscribe(dataL => {
       const l = dataL.count;
 
       for (let i = 0; i < l; i++) {
-        console.log( 'http://' + this.ipAddress + '/machine?it=' + i );
-        this.httpClient.get<any>('http://' + this.ipAddress + '/machine?it=' + i).subscribe(data => {
+        console.log( 'http://' + this.appComponent.ipAddress + '/machine?it=' + i );
+        this.httpClient.get<any>('http://' + this.appComponent.ipAddress + '/machine?it=' + i).subscribe(data => {
           if(data.functions)
           {
             const lF = data.functions.length;
@@ -56,8 +56,9 @@ export class Tab3Page {
   }
 
   fire(fId, mId) {
-    console.log('http://' + this.ipAddress + '/fire?id=' + mId + '&f_id=' + fId);
-    const x = this.httpClient.post<any>('http://' + this.ipAddress + '/fire?id=' + mId + '&f_id=' + fId, '').subscribe(data => {
+    console.log('http://' + this.appComponent.ipAddress + '/fire?id=' + mId + '&f_id=' + fId);
+    const x = this.httpClient.post<any>('http://' + this.appComponent.ipAddress + '/fire?id=' + mId + '&f_id=' + fId, '')
+    .subscribe(data => {
       console.log(data);
       this.openToast(data.result + ': ' + data.roundtriptime + 'ms');
     });
