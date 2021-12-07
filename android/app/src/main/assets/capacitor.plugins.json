@@ -14,5 +14,13 @@
 	{
 		"pkg": "@capacitor/status-bar",
 		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
+	},
+	{
+		"pkg": "@frontall/capacitor-udp",
+		"classpath": "com.capacitorjs.plugins.udp.UDPPlugin"
+	},
+	{
+		"pkg": "capacitor-udp",
+		"classpath": "ai.unitree.udp.UdpPlugin"
 	}
 ]
