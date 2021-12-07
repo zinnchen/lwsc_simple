@@ -1,4 +1,4 @@
-package io.ionic.starter;
+package de.lwsc.kristian;
 
 import com.getcapacitor.BridgeActivity;
 
