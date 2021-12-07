@@ -1,0 +1,7 @@
+{
+  "name": "lwsc_simple",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

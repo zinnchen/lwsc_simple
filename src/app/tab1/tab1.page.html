@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Machine - Blink
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-input [(ngModel)]="ipAddress" value="192.168.4.1"  placeholder="Enter Gateway IP"></ion-input>
+  <ion-list *ngFor="let machine of machines">
+    <ion-item button="true" (click)="blink(machine.id)">{{ machine.name }}</ion-item>
+  </ion-list>
+</ion-content>
