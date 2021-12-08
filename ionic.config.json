@@ -1,0 +1,7 @@
+{
+  "name": "lwsc-remote",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
