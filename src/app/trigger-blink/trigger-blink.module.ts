@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { FolderPageRoutingModule } from './folder-routing.module';
+import { TriggerBlinkPageRoutingModule } from './trigger-blink-routing.module';
 
-import { FolderPage } from './folder.page';
+import { TriggerBlinkPage } from './trigger-blink.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FolderPageRoutingModule
+    TriggerBlinkPageRoutingModule
   ],
-  declarations: [FolderPage]
+  declarations: [TriggerBlinkPage]
 })
-export class FolderPageModule {}
+export class TriggerBlinkPageModule {}

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Blinken</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh" refreshingText="Refreshing....."> </ion-refresher-content>
+  </ion-refresher>
+  <ion-list *ngFor="let machine of machines">
+    <ion-item button="true" (click)="blink(machine.id)">{{ machine.name == '?' ? machine.id : machine.name }}
+    </ion-item>
+  </ion-list>
+</ion-content>

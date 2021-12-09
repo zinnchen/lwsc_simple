@@ -4,12 +4,28 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'trigger-blink',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'trigger-tableau',
+    loadChildren: () => import('./trigger-tableau/trigger-tableau.module').then( m => m.TriggerTableauPageModule)
+  },
+  {
+    path: 'trigger-blink',
+    loadChildren: () => import('./trigger-blink/trigger-blink.module').then( m => m.TriggerBlinkPageModule)
+  },
+  {
+    path: 'trigger-single',
+    loadChildren: () => import('./trigger-single/trigger-single.module').then( m => m.TriggerSinglePageModule)
+  },
+  {
+    path: 'trigger-list',
+    loadChildren: () => import('./trigger-list/trigger-list.module').then( m => m.TriggerListPageModule)
+  },
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then( m => m.AdminPageModule)
   }
 ];
 
