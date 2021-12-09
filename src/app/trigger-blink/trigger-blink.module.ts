@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TriggerBlinkPageRoutingModule } from './trigger-blink-routing.module';
 
 import { TriggerBlinkPage } from './trigger-blink.page';
+import { JohannesCustomComponent } from '../components/johannes-custom/johannes-custom.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { TriggerBlinkPage } from './trigger-blink.page';
     IonicModule,
     TriggerBlinkPageRoutingModule
   ],
-  declarations: [TriggerBlinkPage]
+  declarations: [TriggerBlinkPage, JohannesCustomComponent]
 })
 export class TriggerBlinkPageModule {}
